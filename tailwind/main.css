@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-primary-light;
+}
+
+.btn-primary{
+    @apply bg-secondary text-txt-primary rounded-3xl py-2 px-6;
+}
+
+.btn-secondary{
+    @apply text-txt-primary rounded-3xl py-2 px-6 border-2 hover:bg-primary-light;
+}
+
+.social-btn{
+    @apply rounded-md p-2 flex justify-between w-1/2 items-center;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.leftward-marquee {
+    display: flex;
+    animation: left-marquee 15s linear infinite;
+}
+
+.right-marquee {
+    display: flex;
+    animation: right-marquee 15s linear infinite;
+}
+
+.item {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust as needed */
+}
+
+@keyframes left-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes right-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.card1{
+    @apply rounded-xl bg-tertiary py-12 px-4 flex flex-col justify-center align-middle self-center text-center;
+}
+
+.reviews {
+    @apply flex justify-end space-x-8;
+}
+
+.review{
+    @apply bg-tertiary p-4 rounded-lg h-52 flex space-x-4;
+}
+
+.review .left{
+    @apply h-24
+}
+
+.sitemap{
+    @apply flex flex-col space-y-4;
+}
+.sitemap-list{
+    @apply flex flex-col space-y-4 text-white;
+}
+.sitemap .sitemap-heading{
+    @apply text-white;
+}
+.sitemap .sitemap-list .sitemap-item a:hover{
+    @apply bg-primary-light p-2 rounded-md transition-all;
+}
+
+#feedback{
+    /* width: 6rem;
+    height: 20px; */
+    display: inline-flex;
+    position: sticky;
+    top: 50%;
+    left: 100%;
+    rotate: -90deg;
+}
